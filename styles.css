@@ -1,0 +1,113 @@
+/* === General Styles === */
+:root {
+    --primary-color: #FFC107;
+    --bg-light: rgba(255, 255, 255, 0.2);
+    --bg-dark: rgba(0, 0, 0, 0.6);
+    --text-light: #ffffff;
+    --text-dark: #212121;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('https://source.unsplash.com/1600x900/?hospital') no-repeat center center/cover;
+    color: var(--text-dark);
+    transition: 0.5s;
+}
+
+.dark-mode {
+    background: #121212;
+    color: var(--text-light);
+}
+
+/* === Navbar === */
+.navbar {
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* === Hero Section === */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 15px;
+    margin: 30px auto;
+}
+
+/* === Doctor Cards === */
+.doctor-card {
+    background: var(--bg-light);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.doctor-card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* === Buttons === */
+button {
+    background: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e6a700;
+}
+
+/* === Dashboard Styles === */
+.mode-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.container {
+    max-width: 1100px;
+}
+
+.card {
+    background: var(--bg-light);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.table {
+    backdrop-filter: blur(10px);
+    background: var(--bg-light);
+    border-radius: 10px;
+}
+
+.dark-mode .card, .dark-mode .table {
+    background: var(--bg-dark);
+    color: var(--text-light);
+}
+
+/* === Chart Section === */
+canvas {
+    margin-top: 20px;
+    max-height: 300px;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Appointment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><B>TRIMURTI Healthcare Appointment</B></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">📊 Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">📅 Book Appointment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>    
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Book Your Doctor Appointment</h1>
+            <p>Find the best doctors and schedule your visit with ease.</p>
+        </div>
+    </section>
+    
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Available Doctors</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card doctor-card p-3">
+                    <img src="./assets/cardiologist.jpg" class="card-img-top" alt="Doctor 1">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Dr. A Sharma</h5>
+                        <p class="card-text">Cardiologist</p>
+                        <a href="#" class="btn btn-warning">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card doctor-card p-3">
+                    <img src="./assets/dermatologist3.jpg" class="card-img-top" alt="Doctor 2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Dr. B Verma</h5>
+                        <p class="card-text">Dermatologist</p>
+                        <a href="#" class="btn btn-warning">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card doctor-card p-3">
+                    <img src="./assets/neorologist.jpg" class="card-img-top" alt="Doctor 3">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Dr. C Singh</h5>
+                        <p class="card-text">Neurologist</p>
+                        <a href="#" class="btn btn-warning">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Appointment Booking Form (Hidden by Default) -->
+<div id="bookingModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Book Appointment</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="appointmentForm">
+                    <input type="hidden" id="doctorName">
+                    <div class="mb-3">
+                        <label for="patientId" class="form-label">Patient ID</label>
+                        <input type="text" id="patientId" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="patientName" class="form-label">Patient Name</label>
+                        <input type="text" id="patientName" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="appointmentDate" class="form-label">Appointment Date</label>
+                        <input type="date" id="appointmentDate" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Confirm Booking</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
